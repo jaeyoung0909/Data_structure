@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 typedef struct QueueNode{
 	char valid;
 	char dirty;
@@ -22,7 +21,6 @@ typedef struct Queue{
 }Queue;
 
 
-Node_q *create_node();
 Queue *create_queue();
 Node_q *dequeue(Queue *queue);
 void enqueue(Queue *queue, Node_q* new_node);
@@ -49,12 +47,6 @@ int main(){
     printf("%d\n", (sample_queue->first)->tag);
 
     return 0;
-}
-
-Node_q *create_node(){
-	Node_q* node = (Node_q*)malloc(sizeof(Node_q));
-
-	return node;
 }
 
 
